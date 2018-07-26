@@ -1,0 +1,32 @@
+{
+  "name": "amphtml-validator-server",
+  "version": "0.1.0",
+  "description": "Web API server for amphtml-validator",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "amphtml-validator": "^1.0.23",
+    "neodoc": "^2.0.2",
+    "node-fetch": "^2.2.0"
+  },
+  "scripts": {
+    "lint": "prettier-eslint --write index.js src/* test/*",
+    "server": "node index.js server",
+    "test": "node test/index.js || echo 'ERROR!'"
+  },
+  "url" : "https://github.com/kitsuyui/amphtml-validator-server",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/kitsuyui/amphtml-validator-server.git"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-standard": "^12.0.0-alpha.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1"
+  }
+}
