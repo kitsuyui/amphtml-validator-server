@@ -43,6 +43,28 @@ Content-Type: application/json
 ...
 ```
 
+# As NPM package
+
+## yarn
+
+```console
+$ yarn add amphtml-validator-server
+```
+
+## npm
+
+```console
+$ npm install amphtml-validator-server
+```
+
+## Usage
+
+```js
+const amphtmlValidatorServer = require('amphtml-validator-server');
+const server = amphtmlValidatorServer.createServer();
+server.listen();
+```
+
 # LICENSE
 
 MIT. See Also LICENSE file.

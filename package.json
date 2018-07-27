@@ -11,8 +11,11 @@
   },
   "scripts": {
     "lint": "prettier-eslint --write index.js src/* test/*",
-    "server": "node index.js server",
+    "start": "node index.js",
     "test": "node test/index.js || (echo 'ERROR!' && exit 1)"
+  },
+  "bin": {
+    "amphtml-validator-server": "./index.js"
   },
   "url" : "https://github.com/kitsuyui/amphtml-validator-server",
   "repository" : {
