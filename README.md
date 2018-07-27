@@ -16,7 +16,7 @@ $ docker run -p 8080:8080 -it kitsuyui/amphtml-validator-server
 
 ```console
 $ curl -D - http://localhost:8080/https://www.ampproject.org/
-HTTP/1.1 502 Bad Gateway
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
