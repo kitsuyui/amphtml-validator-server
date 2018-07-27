@@ -1,5 +1,9 @@
 # amphtml-validator-server
 
+![CircleCI](https://img.shields.io/circleci/project/github/kitsuyui/amphtml-validator-server.svg)
+[![Docker Pulls](https://img.shields.io/docker/pulls/kitsuyui/amphtml-validator-server.svg)](https://hub.docker.com/r/kitsuyui/amphtml-validator-server/)
+[![npm](https://img.shields.io/npm/dt/amphtml-validator-server.svg)](https://www.npmjs.com/package/amphtml-validator-server)
+
 Web API of [amphtml-validator](https://www.npmjs.com/package/amphtml-validator)
 
 # Usage
