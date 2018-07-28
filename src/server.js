@@ -1,5 +1,6 @@
 const http = require('http')
 
+const accesslog = require('access-log')
 const amphtmlValidator = require('amphtml-validator')
 const fetch = require('node-fetch')
 
@@ -16,6 +17,7 @@ const prefixes = ['http://', 'https://']
 const createServer = () => {
   return http.createServer(async (req, res) => {
     const url = req.url.slice(1)
+    accesslog(req, res)
     if (!prefixes.some(prefix => url.startsWith(prefix))) {
       res.writeHead(404, {
         'Content-Type': 'text/plain'
