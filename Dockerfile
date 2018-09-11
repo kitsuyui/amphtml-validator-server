@@ -1,4 +1,4 @@
-FROM node:8.11.4-alpine
+FROM node:8.12.0-alpine
 RUN mkdir -p /app
 WORKDIR /app
 ADD . /app
