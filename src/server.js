@@ -5,7 +5,23 @@ const amphtmlValidator = require('amphtml-validator')
 const fetch = require('node-fetch')
 
 const getResult = async url => {
-  const response = await fetch(url)
+  let response
+  try {
+    response = await fetch(url)
+  } catch (e) {
+    return {
+      status: 'FAIL',
+      errors: [
+        {
+          severity: 'ERROR',
+          message: e.message,
+          category: e.type,
+          code: e.code,
+          params: []
+        }
+      ]
+    }
+  }
   const validator = await amphtmlValidator.getInstance()
   const body = await response.text()
   const result = validator.validateString(body)
