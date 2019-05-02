@@ -27,7 +27,7 @@ const main = async () => {
   testServer.listen(port, host)
   const baseURL = `http://${host}:${port}/`
 
-  await testAMP(baseURL, 'https://www.ampproject.org/')
+  await testAMP(baseURL, 'https://preview.amp.dev/documentation/examples/introduction/hello_world')
   await testNonAMP(baseURL, 'https://example.com/')
 
   testServer.close()
