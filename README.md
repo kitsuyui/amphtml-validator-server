@@ -15,7 +15,7 @@ $ docker run -p 8080:8080 -it kitsuyui/amphtml-validator-server
 ## Valid AMP page
 
 ```console
-$ curl -D - http://localhost:8080/https://www.ampproject.org/
+$ curl -D - http://localhost:8080/https://preview.amp.dev/documentation/examples/advertising-analytics/amphtml_ads_vs_non_amp_ads
 HTTP/1.1 200 OK
 Content-Type: application/json
 
