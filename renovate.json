@@ -1,5 +1,17 @@
 {
   "extends": [
     "config:base"
-  ]
+  ],
+  "npm": {
+    "separateMinorPatch": true,
+    "packageRules": [
+      {
+        "packagePatterns": ["*"],
+        "patch": {
+          "groupName": "all npm patch dependencies",
+          "groupSlug": "all-npm-patch"
+        }
+      }
+    ]
+  }
 }
