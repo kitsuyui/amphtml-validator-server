@@ -39,6 +39,7 @@ const createServer = () => {
         'Content-Type': 'text/plain'
       })
       res.end('Not Found')
+      return
     }
     const result = await getResult(url)
     const httpStatus = result.status === 'PASS' ? 200 : 502
