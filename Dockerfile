@@ -1,8 +1,10 @@
 FROM node:8.16.0-alpine
-RUN mkdir -p /app
+RUN \
+apk add --no-cache tini && \
+mkdir -p /app
 WORKDIR /app
 ADD . /app
 RUN yarn install --flat --production=true && yarn test
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["tini", "--", "yarn", "start"]
 CMD ["--host", "0.0.0.0", "--port", "8080"]
 EXPOSE 8080
