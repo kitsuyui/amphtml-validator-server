@@ -34,6 +34,13 @@ const createServer = () => {
   return http.createServer(async (req, res) => {
     const url = req.url.slice(1)
     accesslog(req, res)
+    if (url === "health") {
+      res.writeHead(200, {
+        'Content-Type': 'text/plain'
+      })
+      res.end('OK')
+      return
+    }
     if (!prefixes.some(prefix => url.startsWith(prefix))) {
       res.writeHead(404, {
         'Content-Type': 'text/plain'
