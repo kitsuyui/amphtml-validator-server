@@ -1,4 +1,4 @@
-FROM node:8.17.0-alpine
+FROM node:16.3.0-alpine
 RUN \
 apk add --no-cache tini && \
 mkdir -p /app
