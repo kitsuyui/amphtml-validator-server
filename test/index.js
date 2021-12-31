@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-const fetch = require('node-fetch')
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args))
 
 const server = require('../src/server')
 
