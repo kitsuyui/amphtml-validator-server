@@ -2,7 +2,7 @@ const http = require('http')
 
 const accesslog = require('access-log')
 const amphtmlValidator = require('amphtml-validator')
-const fetch = require('node-fetch')
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args))
 
 const getResult = async url => {
   let response
