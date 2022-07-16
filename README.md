@@ -1,3 +1,6 @@
+# This package is obsolete
+
+
 # amphtml-validator-server
 
 ![CircleCI](https://img.shields.io/circleci/project/github/kitsuyui/amphtml-validator-server.svg)
